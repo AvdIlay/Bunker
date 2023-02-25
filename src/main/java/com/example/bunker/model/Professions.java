@@ -2,6 +2,8 @@ package com.example.bunker.model;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.hibernate.Hibernate;
 
 import java.util.Objects;

@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class ControllerHobby {
+public class HobbyContriller {
     @Autowired
     private final HobbyRepository hobbyRepository;
 
-    public ControllerHobby(HobbyRepository hobbyRepository) {
+    public HobbyContriller(HobbyRepository hobbyRepository) {
         this.hobbyRepository = hobbyRepository;
     }
 
