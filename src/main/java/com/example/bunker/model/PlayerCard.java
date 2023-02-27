@@ -1,10 +1,7 @@
 package com.example.bunker.model;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 import org.hibernate.Hibernate;
 
 import java.util.Objects;
@@ -14,7 +11,6 @@ import java.util.Objects;
 @Getter
 @Setter
 @ToString
-@RequiredArgsConstructor
 public class PlayerCard {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY,
@@ -41,14 +37,30 @@ public class PlayerCard {
     private Baggage baggage;
     @JoinColumn
     @OneToOne
-    private BiologicalCharacteristics biologicalCharacteristics;
+    private Phobia phobia;
     @JoinColumn
     @OneToOne
+    private BiologicalCharacteristics biologicalCharacteristics;
+    @JoinColumn
+    @OneToOne(fetch = FetchType.LAZY)
     private ActionCards actionCards1;
     @JoinColumn
     @OneToOne
-    private ActionCards actionCards;
+    private ActionCards actionCards2;
 
+//    public PlayerCard() {
+//        this.id = getId();
+//        this.professions = getProfessions();
+//        this.health = getHealth();
+//        this.hobby = getHobby();
+//        this.fact1 = getFact1();
+//        this.fact2 = getFact2();
+//        this.baggage = getBaggage();
+//        this.phobia = getPhobia();
+//        this.biologicalCharacteristics = getBiologicalCharacteristics();
+//        this.actionCards1 = getActionCards1();
+//        this.actionCards2 = getActionCards2();
+//    }
 
     @Override
     public boolean equals(Object o) {

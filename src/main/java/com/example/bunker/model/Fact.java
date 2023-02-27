@@ -11,7 +11,6 @@ import java.util.Objects;
 @Getter
 @Setter
 @ToString
-@RequiredArgsConstructor
 public class Fact {
     @Id
     @GeneratedValue( strategy = GenerationType.IDENTITY,
@@ -19,6 +18,14 @@ public class Fact {
     private Long id;
     @Column
     private String title;
+
+    public Fact(String title) {
+        this.title = title;
+    }
+
+    public Fact() {
+
+    }
 
     @Override
     public boolean equals(Object o) {
