@@ -28,7 +28,8 @@ public class PlayerCardDto {
         playerCardDto.setActionCards1(playerCard.getActionCards1().getTitle());
         playerCardDto.setActionCards2(playerCard.getActionCards2().getTitle());
         playerCardDto.setBaggage(playerCard.getBaggage().getTitle());
-        playerCardDto.setPhobia(playerCard.getPhobia().getTitle() + " " + playerCard.getPhobia().getExplanation());
+        playerCardDto.setPhobia(playerCard.getPhobia().getExplanation() + " --> "
+                + playerCard.getPhobia().getTitle());
         playerCardDto.setBiologicalCharacteristics(playerCard.getBiologicalCharacteristics().getAge()
                 + " " + playerCard.getBiologicalCharacteristics().getGender());
         playerCardDto.setFact1(playerCard.getFact1().getTitle());
