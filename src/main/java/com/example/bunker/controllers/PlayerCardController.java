@@ -17,8 +17,7 @@ public class PlayerCardController {
 
     @GetMapping(value = "/randomPlayerCard")
     PlayerCardDto getRandomPlayerCard() {
-        PlayerCard playerCard = actionCardsService.getPlayerCard();
-        return getPlayerCardDto(playerCard);
+        return getPlayerCardDto(actionCardsService.getPlayerCard());
     }
 
 
