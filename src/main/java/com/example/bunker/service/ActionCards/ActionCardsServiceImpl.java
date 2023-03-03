@@ -26,7 +26,6 @@ public class ActionCardsServiceImpl implements ActionCardsService{
         for (ActionCards actionCards : listActionCards) {
             elements.add(actionCards.getId());
         }
-
         return actionCardsRepository.findById(elements.get((int) new Random().nextLong(elements.size()))).orElseThrow();
 
     }
