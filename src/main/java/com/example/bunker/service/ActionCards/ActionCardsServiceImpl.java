@@ -19,7 +19,6 @@ public class ActionCardsServiceImpl implements ActionCardsService{
     @Resource
     private final ActionCardsRepository actionCardsRepository;
 
-
     @Override
     public ActionCards findRandomActionCard() {
         List<ActionCards> listActionCards = actionCardsRepository.findAll();
