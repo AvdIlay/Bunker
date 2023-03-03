@@ -18,7 +18,6 @@ public class ActionCardsServiceImpl implements ActionCardsService{
     private static final Logger LOG = LogManager.getLogger(ActionCardsServiceImpl.class);
     @Resource
     private final ActionCardsRepository actionCardsRepository;
-
     @Override
     public ActionCards findRandomActionCard() {
         List<ActionCards> listActionCards = actionCardsRepository.findAll();
