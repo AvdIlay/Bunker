@@ -1,15 +1,11 @@
 package com.example.bunker.dto;
 
 import com.example.bunker.model.*;
-import com.example.bunker.service.PlayerCard.PlayerCardServiceImpl;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 
-
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
 public class PlayerCardDto {
     private String professions;
@@ -38,7 +34,8 @@ public class PlayerCardDto {
         this.actionCards2 = playerCard.getActionCards2().getTitle();
     }
 
-    public static PlayerCardDto getPlayerCardDto(PlayerCard playerCard) {
+    public  PlayerCardDto getRandomPlayerCardDto(PlayerCard playerCard) {
         return new PlayerCardDto(playerCard);
     }
+
 }

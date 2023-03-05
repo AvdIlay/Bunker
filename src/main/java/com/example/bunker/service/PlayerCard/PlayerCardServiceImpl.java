@@ -43,7 +43,7 @@ public class PlayerCardServiceImpl implements PlayerCardService {
 
 
     @Override
-    public PlayerCard getPlayerCard() {
+    public PlayerCard getRandomPlayerCard() {
         PlayerCard playerCard = new PlayerCard();
         playerCard.setActionCards1(actionCardsService.findRandomActionCard());
         playerCard.setActionCards2(actionCardsService.findRandomActionCard());
@@ -58,4 +58,5 @@ public class PlayerCardServiceImpl implements PlayerCardService {
         playerCardRepository.save(playerCard);
         return playerCard;
     }
+
 }
