@@ -25,7 +25,6 @@ public class BiologicalCharacteristicsServiceImpl implements BiologicalCharacter
     @Override
     public BiologicalCharacteristics findRandomBiologicalCharacteristics() {
         List<BiologicalCharacteristics> listBiologicalCharacteristics = biologicalCharacteristicsRepository.findAll();
-        System.out.println(listBiologicalCharacteristics);
         List<Long> elements = new ArrayList<>();
         for (BiologicalCharacteristics biologicalCharacteristic : listBiologicalCharacteristics) {
             elements.add(biologicalCharacteristic.getId());

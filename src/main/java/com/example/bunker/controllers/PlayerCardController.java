@@ -8,19 +8,16 @@ import jakarta.annotation.Resource;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import static com.example.bunker.dto.PlayerCardDto.getPlayerCardDto;
 
 @RestController
 public class PlayerCardController {
     @Resource
-    private PlayerCardServiceImpl actionCardsService;
-
+    private PlayerCardServiceImpl playerCardService;
     @GetMapping(value = "/randomPlayerCard")
     PlayerCardDto getRandomPlayerCard() {
-        PlayerCard playerCard = actionCardsService.getPlayerCard();
-        return getPlayerCardDto(playerCard);
-    }
+        return new PlayerCardDto().getRandomPlayerCardDto(playerCardService.getRandomPlayerCard());
 
+    }
 
 
 }
